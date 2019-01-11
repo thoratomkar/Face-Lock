@@ -36,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.imageView = (ImageView)this.findViewById(R.id.imageView1);
         Button photoButton = (Button) this.findViewById(R.id.button1);
+        Button appButton = (Button) this.findViewById(R.id.app);
+
+        appButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AppList.class);
+                startActivity(intent);
+            }
+        });
+
         photoButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
